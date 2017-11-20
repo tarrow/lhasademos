@@ -66,7 +66,6 @@
             'Human Genes': x['Human Genes'],
             'Species Binomial': x['Species Binomial'],
             'Word Frequencies': x['Word Frequencies']
-            // xc: x.xc
           }
         })
       }

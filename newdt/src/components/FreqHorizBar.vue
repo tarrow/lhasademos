@@ -29,18 +29,16 @@ export default {
           display: false
         },
         maintainAspectRatio: false,
-        width: 500,
-        height: 50
+        responsive: false,
       }
-  )
+    )
   },
-  props: [ 'data', 'index' ]
+  props: [ 'data', 'index', 'height', 'width' ]
 }
 </script>
 
 <style scoped>
   canvas {
-    height: 100px;
-    max-width: 700px;
+
   }
 </style>

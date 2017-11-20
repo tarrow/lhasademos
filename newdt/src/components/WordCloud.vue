@@ -33,3 +33,10 @@
     props:['data', 'index'],
   }
 </script>
+
+<style scoped>
+  .wordCloud {
+  width: 400;
+  height: 400
+  }
+</style>
