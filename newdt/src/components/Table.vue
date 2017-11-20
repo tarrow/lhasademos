@@ -7,32 +7,50 @@
 
 <script>
   import freqHorizBar from './FreqHorizBar'
+  import WordCloud from './WordCloud'
 
   export default {
     data() {
       return {
-        columns: ['Paper ID', 'Human Genes', 'Species Binomial', 'Species Genus', 'Word Frequencies', 'xc', 'edit'],
+        columns: ['Paper ID', 'Human Genes', 'Species Binomial', 'Species Genus', 'Word Frequencies'],
         rawData: [
           {
             'Paper ID': 'PMC4683095',
             'Human Genes': "",
             "Species Binomial": { "Plasmodium falciparum": 6 },
-            // xc: 4
+            'Word Frequencies': {              	
+              'falciparum': 21,
+              'vivax': 39, 
+              'severe': 35, 
+              'Sabah': 28, 
+              'Plasmodium': 47
+            }
           },
           {
-            'Paper ID': 'PMC4683095',
+            'Paper ID': 'PMC4696710',
             'Human Genes': '',
             "Species Binomial":
               {
-                "Plasmodium falciparum": 6,
-                "Plasmodium vivax": 8
+                "Plasmodium knowlesi": 102,
+                "Plasmodium vivax": 24,
+                "Plasmodium malariae": 24,
+                "Plasmodium falciparum": 20,
+                "Klebsiella pneumoniae": 1
               },
+            'Word Frequencies': {              	
+              'falciparum': 21,
+              'vivax': 39, 
+              'severe': 35, 
+              'Sabah': 28, 
+              'Plasmodium': 47
+            }
           }
         ],
         tableData: [],
         options: {
           templates: {
             'Species Binomial': freqHorizBar,
+            'Word Frequencies': WordCloud
         }
         }
       }
@@ -47,6 +65,7 @@
             'Paper ID': x['Paper ID'],
             'Human Genes': x['Human Genes'],
             'Species Binomial': x['Species Binomial'],
+            'Word Frequencies': x['Word Frequencies']
             // xc: x.xc
           }
         })
