@@ -1,9 +1,23 @@
 webpackJsonp([1],{
 
+/***/ "5dMs":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "6V9n":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "7+0E":
+/***/ (function(module, exports) {
+
+module.exports = {"malaria":72,"antibody":52,"antibodies":5,"febrile":28,"antigens":24,"children":24,"protection":24,"protective":24,"transmission":24,"falciparum":23,"titres":23,"Plasmodium":20,"border-style":20,"associated":18,"merozoite":18,"risk":18,"study":18,"Keur":17,"months":17,"exposure":16,"levels":16,"Banfora":4,"association":14,"clinical":14,"Soce":5,"infants":11,"thresholds":11,"Med":10,"age":10,"analysis":4,"responses":10,"time":10,"using":10,"Burkina":9,"Infect":9,"cohort":9,"role":9,"samples":9,"significantly":9,"studies":9,"used":9,"Antibody":8,"Malaria":8,"Trop":8,"compared":8,"data":8,"described":8,"haemoglobin":8,"low":8,"malaria.":8,"results":8,"Osier":7,"aged":7,"episodes":7,"intensity":7,"measured":7,"number":7,"reduced":7,"relationship":7,"settings":7,"tested":7,"threshold":7,"African":6,"IgG":6,"MSP-Dd":6,"Murungi":6,"acquired":6,"blood":6,"double;":6,"high":6,"higher":6,"human":6,"immunity":6,"life":6,"parasite":6,"previously":6,"rates":6,"regression":6,"surface":6,"work":6,"Dis":5,"Fig.":5,"Hyg":5,"MSP":5,"MSP-":5,"MSP-D":5,"Riley":5,"Table":5,"Vaccine":5,"adjusting":5,"apparent":5,"assays":5,"asymptomatic":5,"border-color":5,"border-width":5,"concentration":5,"conducted":5,"established":5,"foetal":5,"incidence":5,"maternal":5,"passive":5,"period":5,"point":5,"seroprevalence":5,"solid;":5,"font-style":5,"font-weight":5,"AMA-D":4,"Briefly":4,"F.H.A.":4,"Faso":4,"Immun":4,"LINK":4,"MSP-D)":4,"account":4,"active":4,"analysed":4,"anti-malaria":4,"anti-merozoite":4,"antigen-specific":4,"area":4,"average":4,"bold":4,"case":4,"children.":4,"cohorts":4,"consistent":4,"correlated":4,"courier;":4,"decay":4,"detected":4,"different":4,"differing":4,"dynamics":4,"early":4,"effect":4,"em;":4,"examined":4,"following":4,"immune":4,"increasing":4,"index":4,"individual":4,"infection":4,"infections":4,"lack":4,"model":4,"older":4,"similar":4,"total":4,"transfer":4,"vaccine":4,"year":4,"years":4}
 
 /***/ }),
 
@@ -14,7 +28,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ "ETqE":
+/***/ "JSxU":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -176,6 +190,9 @@ var word_cloud_default = /*#__PURE__*/__webpack_require__.n(word_cloud);
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ var WordCloud = ({
@@ -185,7 +202,9 @@ var word_cloud_default = /*#__PURE__*/__webpack_require__.n(word_cloud);
   },
   data: function data() {
     return {
-      Words: []
+      Words: [],
+      rotate: { from: 0, to: 0, numOfOrientation: 1 },
+      fontSize: [10, 70]
     };
   },
   mounted: function mounted() {
@@ -203,14 +222,14 @@ var word_cloud_default = /*#__PURE__*/__webpack_require__.n(word_cloud);
   },
   props: ['data', 'index']
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-1bffba6a","hasScoped":true,"transformToRequire":{"video":"src","source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/WordCloud.vue
-var WordCloud_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"wordfreqcloud"}},[_c('wordcloud',{attrs:{"data":_vm.Words,"nameKey":"name","valueKey":"value"}})],1)}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-4755e9c3","hasScoped":true,"transformToRequire":{"video":"src","source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/WordCloud.vue
+var WordCloud_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"wordfreqcloud"}},[_c('wordcloud',{attrs:{"data":_vm.Words,"nameKey":"name","valueKey":"value","rotate":_vm.rotate,"fontSize":_vm.fontSize}})],1)}
 var WordCloud_staticRenderFns = []
 var WordCloud_esExports = { render: WordCloud_render, staticRenderFns: WordCloud_staticRenderFns }
 /* harmony default export */ var components_WordCloud = (WordCloud_esExports);
 // CONCATENATED MODULE: ./src/components/WordCloud.vue
 function WordCloud_injectStyle (ssrContext) {
-  __webpack_require__("ETqE")
+  __webpack_require__("5dMs")
 }
 var WordCloud_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -222,7 +241,7 @@ var WordCloud___vue_template_functional__ = false
 /* styles */
 var WordCloud___vue_styles__ = WordCloud_injectStyle
 /* scopeId */
-var WordCloud___vue_scopeId__ = "data-v-1bffba6a"
+var WordCloud___vue_scopeId__ = "data-v-4755e9c3"
 /* moduleIdentifier (server only) */
 var WordCloud___vue_module_identifier__ = null
 var WordCloud_Component = WordCloud_normalizeComponent(
@@ -310,6 +329,10 @@ var WikidataDisease_Component = WikidataDisease_normalizeComponent(
 
 /* harmony default export */ var src_components_WikidataDisease = (WikidataDisease_Component.exports);
 
+// EXTERNAL MODULE: ./src/components/bigFreq.json
+var bigFreq = __webpack_require__("7+0E");
+var bigFreq_default = /*#__PURE__*/__webpack_require__.n(bigFreq);
+
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/components/Table.vue
 //
 //
@@ -318,6 +341,7 @@ var WikidataDisease_Component = WikidataDisease_normalizeComponent(
 //
 //
 //
+
 
 
 
@@ -349,13 +373,7 @@ var WikidataDisease_Component = WikidataDisease_normalizeComponent(
           "Plasmodium falciparum": 20,
           "Klebsiella pneumoniae": 1
         },
-        'Word Frequencies': {
-          'falciparum': 21,
-          'vivax': 39,
-          'severe': 35,
-          'Sabah': 28,
-          'Plasmodium': 47
-        }
+        'Word Frequencies': bigFreq_default.a
       }],
       tableData: [],
       options: {
@@ -385,14 +403,14 @@ var WikidataDisease_Component = WikidataDisease_normalizeComponent(
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-03abcacc","hasScoped":true,"transformToRequire":{"video":"src","source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/Table.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-3d3a534e","hasScoped":true,"transformToRequire":{"video":"src","source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/Table.vue
 var Table_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"datatable"}},[_c('h1',[_vm._v("ContentMine DataTables")]),_vm._v(" "),_c('v-client-table',{attrs:{"data":_vm.tableData,"columns":_vm.columns,"options":_vm.options}})],1)}
 var Table_staticRenderFns = []
 var Table_esExports = { render: Table_render, staticRenderFns: Table_staticRenderFns }
 /* harmony default export */ var components_Table = (Table_esExports);
 // CONCATENATED MODULE: ./src/components/Table.vue
 function Table_injectStyle (ssrContext) {
-  __webpack_require__("NlLq")
+  __webpack_require__("JSxU")
 }
 var Table_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -404,7 +422,7 @@ var Table___vue_template_functional__ = false
 /* styles */
 var Table___vue_styles__ = Table_injectStyle
 /* scopeId */
-var Table___vue_scopeId__ = "data-v-03abcacc"
+var Table___vue_scopeId__ = "data-v-3d3a534e"
 /* moduleIdentifier (server only) */
 var Table___vue_module_identifier__ = null
 var Table_Component = Table_normalizeComponent(
@@ -467,13 +485,6 @@ new vue_esm["default"]({
   template: '<App/>',
   components: { App: src_App }
 });
-
-/***/ }),
-
-/***/ "NlLq":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -738,4 +749,4 @@ webpackContext.id = "uslO";
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.d930c1c2f54e1b8075e8.js.map
+//# sourceMappingURL=app.8a239537cffb656478a2.js.map
