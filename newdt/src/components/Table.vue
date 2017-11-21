@@ -8,11 +8,13 @@
 <script>
   import freqHorizBar from './FreqHorizBar'
   import WordCloud from './WordCloud'
+  import wikidataDisease from './WikidataDisease'
+  import bigFreq from './bigFreq.json'
 
   export default {
     data() {
       return {
-        columns: ['Paper ID', 'Human Genes', 'Species Binomial', 'Species Genus', 'Word Frequencies'],
+        columns: ['Paper ID', 'Human Genes', 'Species Binomial', 'Species Genus', 'Word Frequencies', 'Disease'],
         rawData: [
           {
             'Paper ID': 'PMC4683095',
@@ -24,7 +26,8 @@
               'severe': 35, 
               'Sabah': 28, 
               'Plasmodium': 47
-            }
+            },
+            'Disease': 'Q12156'
           },
           {
             'Paper ID': 'PMC4696710',
@@ -37,20 +40,15 @@
                 "Plasmodium falciparum": 20,
                 "Klebsiella pneumoniae": 1
               },
-            'Word Frequencies': {              	
-              'falciparum': 21,
-              'vivax': 39, 
-              'severe': 35, 
-              'Sabah': 28, 
-              'Plasmodium': 47
-            }
+            'Word Frequencies': bigFreq
           }
         ],
         tableData: [],
         options: {
           templates: {
             'Species Binomial': freqHorizBar,
-            'Word Frequencies': WordCloud
+            'Word Frequencies': WordCloud,
+            'Disease': wikidataDisease
         }
         }
       }
@@ -65,7 +63,8 @@
             'Paper ID': x['Paper ID'],
             'Human Genes': x['Human Genes'],
             'Species Binomial': x['Species Binomial'],
-            'Word Frequencies': x['Word Frequencies']
+            'Word Frequencies': x['Word Frequencies'],
+            'Disease': x.Disease
           }
         })
       }

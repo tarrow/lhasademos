@@ -3,7 +3,10 @@
         <wordcloud
         :data="Words"
         nameKey="name"
-        valueKey="value">
+        valueKey="value"
+        :rotate="rotate"
+        :fontSize="fontSize"
+        >
         </wordcloud>
     </div>
 </template>
@@ -16,7 +19,9 @@
       wordcloud
     },
     data()  { return {
-      Words: []
+      Words: [],
+      rotate: {from: 0, to: 0, numOfOrientation: 1},
+      fontSize: [10, 70]
     }},
     mounted() {
       console.log(this.data)
