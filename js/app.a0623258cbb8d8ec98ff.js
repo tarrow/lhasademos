@@ -1,5 +1,12 @@
 webpackJsonp([1],{
 
+/***/ "3GM0":
+/***/ (function(module, exports) {
+
+module.exports = {"fluconazole":18,"gestational":15,"day":14,"().":9,"branchial":9,"arch":8,"exposure":8,"fetuses":8,"teratogenic":8,"fetal":7,"palate":7,"cleft":6,"(Fig.":5,"Clin":5,"Developmental":5,"animals":5,"anomalies":5,"developmental":5,"ear":5,"embryo":5,"induced":5,"malformations":5,"maternal":5,"mg/kg":5,"mouse":5,"study":5,"using":5,"control":4,"effects":4,"fluconazole.":4,"mg),":4,"mice":4,"middle":4,"phase":4,"pregnant":4,"significant":4,"test":4,"tympanic":4}
+
+/***/ }),
+
 /***/ "5dMs":
 /***/ (function(module, exports) {
 
@@ -22,13 +29,6 @@ module.exports = {"malaria":72,"antibody":52,"antibodies":5,"febrile":28,"antige
 /***/ }),
 
 /***/ "9rLS":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "JSxU":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -299,8 +299,8 @@ var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-6fa5df20","hasScoped":false,"transformToRequire":{"video":"src","source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/WikidataDisease.vue
-var WikidataDisease_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.disease),expression:"disease"}],attrs:{"id":"Wikidata"}},[_vm._v("\n  Disease "+_vm._s(_vm.disease)+" causes "+_vm._s(_vm.numberofdeaths)+" deaths each year\n")])}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-266270f0","hasScoped":false,"transformToRequire":{"video":"src","source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/WikidataDisease.vue
+var WikidataDisease_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.disease),expression:"disease"}],attrs:{"id":"Wikidata"}},[_vm._v("\n  Disease: "+_vm._s(_vm.disease)+" Deaths: "+_vm._s(_vm.numberofdeaths)+"\n")])}
 var WikidataDisease_staticRenderFns = []
 var WikidataDisease_esExports = { render: WikidataDisease_render, staticRenderFns: WikidataDisease_staticRenderFns }
 /* harmony default export */ var components_WikidataDisease = (WikidataDisease_esExports);
@@ -333,6 +333,10 @@ var WikidataDisease_Component = WikidataDisease_normalizeComponent(
 var bigFreq = __webpack_require__("7+0E");
 var bigFreq_default = /*#__PURE__*/__webpack_require__.n(bigFreq);
 
+// EXTERNAL MODULE: ./src/components/DARTFreq.json
+var DARTFreq = __webpack_require__("3GM0");
+var DARTFreq_default = /*#__PURE__*/__webpack_require__.n(DARTFreq);
+
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/components/Table.vue
 //
 //
@@ -341,6 +345,7 @@ var bigFreq_default = /*#__PURE__*/__webpack_require__.n(bigFreq);
 //
 //
 //
+
 
 
 
@@ -374,6 +379,10 @@ var bigFreq_default = /*#__PURE__*/__webpack_require__.n(bigFreq);
           "Klebsiella pneumoniae": 1
         },
         'Word Frequencies': bigFreq_default.a
+      }, {
+        'Paper ID': "DART Paper 1",
+        'Word Frequencies': DARTFreq_default.a,
+        'Disease': 'Q273510'
       }],
       tableData: [],
       options: {
@@ -403,14 +412,14 @@ var bigFreq_default = /*#__PURE__*/__webpack_require__.n(bigFreq);
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-3d3a534e","hasScoped":true,"transformToRequire":{"video":"src","source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/Table.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-58838230","hasScoped":true,"transformToRequire":{"video":"src","source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/Table.vue
 var Table_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"datatable"}},[_c('h1',[_vm._v("ContentMine DataTables")]),_vm._v(" "),_c('v-client-table',{attrs:{"data":_vm.tableData,"columns":_vm.columns,"options":_vm.options}})],1)}
 var Table_staticRenderFns = []
 var Table_esExports = { render: Table_render, staticRenderFns: Table_staticRenderFns }
 /* harmony default export */ var components_Table = (Table_esExports);
 // CONCATENATED MODULE: ./src/components/Table.vue
 function Table_injectStyle (ssrContext) {
-  __webpack_require__("JSxU")
+  __webpack_require__("S+f+")
 }
 var Table_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -422,7 +431,7 @@ var Table___vue_template_functional__ = false
 /* styles */
 var Table___vue_styles__ = Table_injectStyle
 /* scopeId */
-var Table___vue_scopeId__ = "data-v-3d3a534e"
+var Table___vue_scopeId__ = "data-v-58838230"
 /* moduleIdentifier (server only) */
 var Table___vue_module_identifier__ = null
 var Table_Component = Table_normalizeComponent(
@@ -485,6 +494,13 @@ new vue_esm["default"]({
   template: '<App/>',
   components: { App: src_App }
 });
+
+/***/ }),
+
+/***/ "S+f+":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -749,4 +765,4 @@ webpackContext.id = "uslO";
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.8a239537cffb656478a2.js.map
+//# sourceMappingURL=app.a0623258cbb8d8ec98ff.js.map
