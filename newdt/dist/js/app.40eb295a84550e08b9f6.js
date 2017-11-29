@@ -7,13 +7,6 @@ module.exports = {"fluconazole":18,"gestational":15,"day":14,"().":9,"branchial"
 
 /***/ }),
 
-/***/ "5dMs":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "6V9n":
 /***/ (function(module, exports) {
 
@@ -29,6 +22,13 @@ module.exports = {"malaria":72,"antibody":52,"antibodies":5,"febrile":28,"antige
 /***/ }),
 
 /***/ "9rLS":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "F0w+":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -222,14 +222,14 @@ var word_cloud_default = /*#__PURE__*/__webpack_require__.n(word_cloud);
   },
   props: ['data', 'index']
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-4755e9c3","hasScoped":true,"transformToRequire":{"video":"src","source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/WordCloud.vue
-var WordCloud_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"wordfreqcloud"}},[_c('wordcloud',{attrs:{"data":_vm.Words,"nameKey":"name","valueKey":"value","rotate":_vm.rotate,"fontSize":_vm.fontSize}})],1)}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-1743a145","hasScoped":true,"transformToRequire":{"video":"src","source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/WordCloud.vue
+var WordCloud_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.Words.length)?_c('div',{attrs:{"id":"wordfreqcloud"}},[_c('wordcloud',{attrs:{"data":_vm.Words,"nameKey":"name","valueKey":"value","rotate":_vm.rotate,"fontSize":_vm.fontSize}})],1):_vm._e()}
 var WordCloud_staticRenderFns = []
 var WordCloud_esExports = { render: WordCloud_render, staticRenderFns: WordCloud_staticRenderFns }
 /* harmony default export */ var components_WordCloud = (WordCloud_esExports);
 // CONCATENATED MODULE: ./src/components/WordCloud.vue
 function WordCloud_injectStyle (ssrContext) {
-  __webpack_require__("5dMs")
+  __webpack_require__("Q9WG")
 }
 var WordCloud_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -241,7 +241,7 @@ var WordCloud___vue_template_functional__ = false
 /* styles */
 var WordCloud___vue_styles__ = WordCloud_injectStyle
 /* scopeId */
-var WordCloud___vue_scopeId__ = "data-v-4755e9c3"
+var WordCloud___vue_scopeId__ = "data-v-1743a145"
 /* moduleIdentifier (server only) */
 var WordCloud___vue_module_identifier__ = null
 var WordCloud_Component = WordCloud_normalizeComponent(
@@ -270,6 +270,8 @@ var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
 //
 //
 //
+//
+//
 
 
 
@@ -277,7 +279,8 @@ var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
   data: function data() {
     return {
       disease: '',
-      numberofdeaths: ''
+      numberofdeaths: '',
+      wdlink: ''
     };
   },
 
@@ -291,16 +294,15 @@ var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
       var me = this;
       var url = lib_default.a.getEntities(wid);
       axios_default.a.get(url).then(function (resp) {
-        console.log(resp);
         me.disease = resp.data.entities[wid].labels.en.value;
-        console.log(resp.data.entities[wid].claims.P1120[0].mainsnak.datavalue.value);
         me.numberofdeaths = parseInt(resp.data.entities[wid].claims.P1120[0].mainsnak.datavalue.value.amount);
+        me.wdlink = "https://wikidata.org/wiki/" + wid;
       });
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-266270f0","hasScoped":false,"transformToRequire":{"video":"src","source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/WikidataDisease.vue
-var WikidataDisease_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.disease),expression:"disease"}],attrs:{"id":"Wikidata"}},[_vm._v("\n  Disease: "+_vm._s(_vm.disease)+" Deaths: "+_vm._s(_vm.numberofdeaths)+"\n")])}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-0cfdb2ea","hasScoped":false,"transformToRequire":{"video":"src","source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/WikidataDisease.vue
+var WikidataDisease_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.disease),expression:"disease"}],attrs:{"id":"Wikidata"}},[_vm._v("\n  Disease: "+_vm._s(_vm.disease)+" "),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.numberofdeaths),expression:"numberofdeaths"}]},[_vm._v("Deaths: "+_vm._s(_vm.numberofdeaths))]),_vm._v(" "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":_vm.wdlink}},[_vm._v("Wikidata")])])}
 var WikidataDisease_staticRenderFns = []
 var WikidataDisease_esExports = { render: WikidataDisease_render, staticRenderFns: WikidataDisease_staticRenderFns }
 /* harmony default export */ var components_WikidataDisease = (WikidataDisease_esExports);
@@ -329,6 +331,81 @@ var WikidataDisease_Component = WikidataDisease_normalizeComponent(
 
 /* harmony default export */ var src_components_WikidataDisease = (WikidataDisease_Component.exports);
 
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/components/WikidataDrug.vue
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ var WikidataDrug = ({
+  data: function data() {
+    return {
+      drug: '',
+      formula: '',
+      CAS: '',
+      raw: {},
+      wdlink: ''
+    };
+  },
+
+  props: ['data', 'index'],
+  mounted: function mounted() {
+    this.getContentFromWD(this.data.Drugs);
+  },
+
+  methods: {
+    getContentFromWD: function getContentFromWD(wid) {
+      var me = this;
+      if (!wid) return;
+      var url = lib_default.a.getEntities(wid);
+      axios_default.a.get(url).then(function (resp) {
+        console.log(resp);
+        me.raw = resp.data;
+        me.drug = resp.data.entities[wid].labels.en.value;
+        me.formula = resp.data.entities[wid].claims.P274[0].mainsnak.datavalue.value;
+        me.CAS = resp.data.entities[wid].claims.P231[0].mainsnak.datavalue.value;
+        me.wdlink = "https://wikidata.org/wiki/" + wid;
+      });
+    }
+  }
+});
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-7f96bf6a","hasScoped":false,"transformToRequire":{"video":"src","source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/WikidataDrug.vue
+var WikidataDrug_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.drug),expression:"drug"}],attrs:{"id":"Wikidata"}},[_vm._v("\n  Drug: "+_vm._s(_vm.drug)),_c('br'),_vm._v("\n  Chemical Formula: "+_vm._s(_vm.formula)),_c('br'),_vm._v("\n  CAS Registry Number "+_vm._s(_vm.CAS)),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":_vm.wdlink}},[_vm._v("Wikidata")])])}
+var WikidataDrug_staticRenderFns = []
+var WikidataDrug_esExports = { render: WikidataDrug_render, staticRenderFns: WikidataDrug_staticRenderFns }
+/* harmony default export */ var components_WikidataDrug = (WikidataDrug_esExports);
+// CONCATENATED MODULE: ./src/components/WikidataDrug.vue
+var WikidataDrug_normalizeComponent = __webpack_require__("VU/8")
+/* script */
+
+/* template */
+
+/* template functional */
+var WikidataDrug___vue_template_functional__ = false
+/* styles */
+var WikidataDrug___vue_styles__ = null
+/* scopeId */
+var WikidataDrug___vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var WikidataDrug___vue_module_identifier__ = null
+var WikidataDrug_Component = WikidataDrug_normalizeComponent(
+  WikidataDrug,
+  components_WikidataDrug,
+  WikidataDrug___vue_template_functional__,
+  WikidataDrug___vue_styles__,
+  WikidataDrug___vue_scopeId__,
+  WikidataDrug___vue_module_identifier__
+)
+
+/* harmony default export */ var src_components_WikidataDrug = (WikidataDrug_Component.exports);
+
 // EXTERNAL MODULE: ./src/components/bigFreq.json
 var bigFreq = __webpack_require__("7+0E");
 var bigFreq_default = /*#__PURE__*/__webpack_require__.n(bigFreq);
@@ -352,11 +429,33 @@ var DARTFreq_default = /*#__PURE__*/__webpack_require__.n(DARTFreq);
 
 
 
+
 /* harmony default export */ var Table = ({
   data: function data() {
     return {
-      columns: ['Paper ID', 'Human Genes', 'Species Binomial', 'Species Genus', 'Word Frequencies', 'Disease'],
+      columns: ['Paper ID', 'Disease', 'Drugs', 'Word Frequencies', 'Species Binomial'],
       rawData: [{
+        'Paper ID': "DART Paper 1",
+        'Word Frequencies': DARTFreq_default.a,
+        'Disease': 'Q273510',
+        'Drugs': 'Q411478'
+      }, {
+        'Paper ID': "DART Paper 2",
+        'Word Frequencies': {},
+        'Drugs': 'Q3359058'
+      }, {
+        'Paper ID': "DART Paper 3",
+        'Word Frequencies': {},
+        'Drugs': 'Q411229'
+      }, {
+        'Paper ID': "Clinical Paper 1",
+        'Word Frequencies': {},
+        'Disease': 'Q6853'
+      }, {
+        'Paper ID': "Clinical Paper 3",
+        'Word Frequencies': {},
+        'Disease': 'Q6853'
+      }, {
         'Paper ID': 'PMC4683095',
         'Human Genes': "",
         "Species Binomial": { "Plasmodium falciparum": 6 },
@@ -379,17 +478,14 @@ var DARTFreq_default = /*#__PURE__*/__webpack_require__.n(DARTFreq);
           "Klebsiella pneumoniae": 1
         },
         'Word Frequencies': bigFreq_default.a
-      }, {
-        'Paper ID': "DART Paper 1",
-        'Word Frequencies': DARTFreq_default.a,
-        'Disease': 'Q273510'
       }],
       tableData: [],
       options: {
         templates: {
           'Species Binomial': components_FreqHorizBar,
           'Word Frequencies': src_components_WordCloud,
-          'Disease': src_components_WikidataDisease
+          'Disease': src_components_WikidataDisease,
+          'Drugs': src_components_WikidataDrug
         }
       }
     };
@@ -406,20 +502,21 @@ var DARTFreq_default = /*#__PURE__*/__webpack_require__.n(DARTFreq);
           'Human Genes': x['Human Genes'],
           'Species Binomial': x['Species Binomial'],
           'Word Frequencies': x['Word Frequencies'],
-          'Disease': x.Disease
+          'Disease': x.Disease,
+          'Drugs': x.Drugs
         };
       });
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-58838230","hasScoped":true,"transformToRequire":{"video":"src","source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/Table.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-9153f50a","hasScoped":true,"transformToRequire":{"video":"src","source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/Table.vue
 var Table_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"datatable"}},[_c('h1',[_vm._v("ContentMine DataTables")]),_vm._v(" "),_c('v-client-table',{attrs:{"data":_vm.tableData,"columns":_vm.columns,"options":_vm.options}})],1)}
 var Table_staticRenderFns = []
 var Table_esExports = { render: Table_render, staticRenderFns: Table_staticRenderFns }
 /* harmony default export */ var components_Table = (Table_esExports);
 // CONCATENATED MODULE: ./src/components/Table.vue
 function Table_injectStyle (ssrContext) {
-  __webpack_require__("S+f+")
+  __webpack_require__("F0w+")
 }
 var Table_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -431,7 +528,7 @@ var Table___vue_template_functional__ = false
 /* styles */
 var Table___vue_styles__ = Table_injectStyle
 /* scopeId */
-var Table___vue_scopeId__ = "data-v-58838230"
+var Table___vue_scopeId__ = "data-v-9153f50a"
 /* moduleIdentifier (server only) */
 var Table___vue_module_identifier__ = null
 var Table_Component = Table_normalizeComponent(
@@ -497,7 +594,7 @@ new vue_esm["default"]({
 
 /***/ }),
 
-/***/ "S+f+":
+/***/ "Q9WG":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -765,4 +862,4 @@ webpackContext.id = "uslO";
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.a0623258cbb8d8ec98ff.js.map
+//# sourceMappingURL=app.40eb295a84550e08b9f6.js.map
